@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/2021/04/19/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<span id="more"></span>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>Hexo搭建blogs</title>
     <url>/2021/04/19/hexo%E6%90%AD%E5%BB%BAblogs/</url>
     <content><![CDATA[<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><ol>
@@ -13,6 +28,7 @@
 <li>仓库名字必须是：<code>username.github.io</code>，其中<code>username</code>是你的用户名；</li>
 <li>仓库创建成功不会立即生效，需要过一段时间才会生效；</li>
 </ol>
+<span id="more"></span>
 <h2 id="准备Git和配置SSH-Key"><a href="#准备Git和配置SSH-Key" class="headerlink" title="准备Git和配置SSH Key"></a>准备Git和配置SSH Key</h2><ol>
 <li><p>下载安装<a href="https://gitforwindows.org/">git for windows</a></p>
 </li>
@@ -62,11 +78,24 @@
       </categories>
   </entry>
   <entry>
-    <title>常用Hexo命令</title>
-    <url>/2021/04/19/%E5%B8%B8%E7%94%A8hexo%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<h2 id="常见命令"><a href="#常见命令" class="headerlink" title="常见命令"></a>常见命令</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new &quot;postName&quot; #新建文章</span><br><span class="line">hexo new page &quot;pageName&quot; #新建页面</span><br><span class="line">hexo generate #生成静态页面至public目录</span><br><span class="line">hexo server #开启预览访问端口（默认端口4000，&#39;ctrl + c&#39;关闭server）</span><br><span class="line">hexo deploy #部署到GitHub</span><br><span class="line">hexo help  # 查看帮助</span><br><span class="line">hexo version  #查看Hexo的版本</span><br></pre></td></tr></table></figure>
-<h2 id="缩写形式"><a href="#缩写形式" class="headerlink" title="缩写形式"></a>缩写形式</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo n &#x3D;&#x3D; hexo new</span><br><span class="line">hexo g &#x3D;&#x3D; hexo generate</span><br><span class="line">hexo s &#x3D;&#x3D; hexo server</span><br><span class="line">hexo d &#x3D;&#x3D; hexo deploy</span><br></pre></td></tr></table></figure>
-<h2 id="组合命令"><a href="#组合命令" class="headerlink" title="组合命令"></a>组合命令</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo s -g #生成并本地预览</span><br><span class="line">hexo d -g #生成并上传</span><br></pre></td></tr></table></figure>
+    <title>next主题代码块复制功能</title>
+    <url>/2021/04/19/next%E4%B8%BB%E9%A2%98%E4%BB%A3%E7%A0%81%E5%9D%97%E5%A4%8D%E5%88%B6%E5%8A%9F%E8%83%BD/</url>
+    <content><![CDATA[<p><strong>在next主题配置文件<code>_config.yml</code>中，启用 <code>copy_button</code></strong></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">copy_button:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span> </span><br><span class="line">  <span class="comment"># Show text copy result.</span></span><br><span class="line">  <span class="attr">show_result:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># Available values: default | flat | mac</span></span><br><span class="line">  <span class="attr">style:</span></span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>next主题搜索功能</title>
+    <url>/2021/04/19/next%E4%B8%BB%E9%A2%98%E6%90%9C%E7%B4%A2%E5%8A%9F%E8%83%BD/</url>
+    <content><![CDATA[<h2 id="安装插件"><a href="#安装插件" class="headerlink" title="安装插件"></a>安装插件</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-generator-search  --save</span><br><span class="line">npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><p>在hexo站点主配置文件<code>_config.yml</code>,在文件末尾添加</p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="attr">search:</span></span><br><span class="line">  <span class="attr">path:</span> <span class="string">search.xml</span></span><br><span class="line">  <span class="attr">field:</span> <span class="string">post</span></span><br><span class="line">  <span class="attr">format:</span> <span class="string">html</span></span><br><span class="line">  <span class="attr">limit:</span> <span class="number">10000</span></span><br></pre></td></tr></table></figure>
+<h2 id="修改配置"><a href="#修改配置" class="headerlink" title="修改配置"></a>修改配置</h2><p>在next主题配置文件<code>_config.yml</code>中，启用 <code>local_search</code></p>
+<figure class="highlight yaml"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Local search</span></span><br><span class="line"><span class="attr">local_search:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># if auto, trigger search by changing input</span></span><br><span class="line">  <span class="comment"># if manual, trigger search by pressing enter key or search button</span></span><br><span class="line">  <span class="attr">trigger:</span> <span class="string">auto</span></span><br><span class="line">  <span class="comment"># show top n results per article, show all results by setting to -1</span></span><br><span class="line">  <span class="attr">top_n_per_article:</span> <span class="number">1</span></span><br></pre></td></tr></table></figure>
 ]]></content>
       <categories>
         <category>Hexo</category>
@@ -76,6 +105,7 @@
     <title>next主题数学公式显示</title>
     <url>/2021/04/19/next%E4%B8%BB%E9%A2%98%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8F%E6%98%BE%E7%A4%BA/</url>
     <content><![CDATA[<h2 id="更换渲染引擎"><a href="#更换渲染引擎" class="headerlink" title="更换渲染引擎"></a>更换渲染引擎</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm uninstall hexo-renderer-marked --save</span><br><span class="line">npm install hexo-renderer-kramed --save</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
 <h2 id="修改node-modules-kramed-lib-rules-inline-js文件"><a href="#修改node-modules-kramed-lib-rules-inline-js文件" class="headerlink" title="修改node_modules\kramed\lib\rules\inline.js文件"></a>修改node_modules\kramed\lib\rules\inline.js文件</h2><p>把第11行的escape变量的值做相应的修改：</p>
 <figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">//  escape: /^\\([\\`*&#123;&#125;\[\]()#$+\-.!_&gt;])/,</span></span><br><span class="line">  <span class="built_in">escape</span>: <span class="regexp">/^\\([`*\[\]()#$+\-.!_&gt;])/</span>,</span><br></pre></td></tr></table></figure>
 <p>把第20行的em变量做相应的修改：</p>
@@ -94,9 +124,42 @@
       </categories>
   </entry>
   <entry>
-    <title>第二章总结</title>
-    <url>/2021/04/19/%E7%AC%AC%E4%BA%8C%E7%AB%A0%E6%80%BB%E7%BB%93/</url>
-    <content><![CDATA[<script type="math/tex; mode=display">
+    <title>pip换源</title>
+    <url>/2021/04/19/pip%E6%8D%A2%E6%BA%90/</url>
+    <content><![CDATA[<h2 id="采用国内源，加速下载模块的速度"><a href="#采用国内源，加速下载模块的速度" class="headerlink" title="采用国内源，加速下载模块的速度"></a>采用国内源，加速下载模块的速度</h2><p>1、常用pip源：</p>
+<p>— 豆瓣：<a href="https://pypi.douban.com/simple">https://pypi.douban.com/simple</a> </p>
+<p>— 阿里：<a href="https://mirrors.aliyun.com/pypi/simple">https://mirrors.aliyun.com/pypi/simple</a> </p>
+<p>2、加速安装的命令： </p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pip install -i https:&#x2F;&#x2F;pypi.douban.com&#x2F;simple 模块名</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<h2 id="永久配置安装源"><a href="#永久配置安装源" class="headerlink" title="永久配置安装源"></a><strong>永久配置安装源</strong></h2><p>1、文件管理器文件路径地址栏敲：%APPDATA% 回车，</p>
+<p>​        进入 C:\Users\电脑用户\AppData\Roaming 文件夹中 </p>
+<p>2、新建 pip 文件夹并在文件夹中新建 pip.ini 配置文件 </p>
+<p>3、新增 pip.ini 配置文件内容 </p>
+<h2 id="MacOS、Linux"><a href="#MacOS、Linux" class="headerlink" title="MacOS、Linux"></a>MacOS、Linux</h2><p>1、在用户根目录下 ~ 下创建 .pip 隐藏文件夹，如果已经有了可以跳过 — mkdir ~/.pip </p>
+<p>2、进入 .pip 隐藏文件夹并创建 pip.conf 配置文件 — cd ~/.pip &amp;&amp; touch pip.conf </p>
+<p>3、启动 Finder(访达) 按 cmd+shift+g 来的进入，输入 ~/.pip 回车进入</p>
+<p>4、新增 pip.conf 配置文件内容 “””</p>
+<h2 id="配置文件内容"><a href="#配置文件内容" class="headerlink" title="配置文件内容"></a>配置文件内容</h2><figure class="highlight tex"><table><tr><td class="code"><pre><span class="line">[global] </span><br><span class="line">index-url = http://pypi.douban.com/simple </span><br><span class="line">[install] </span><br><span class="line">use-mirrors =true </span><br><span class="line">mirrors =http://pypi.douban.com/simple/ </span><br><span class="line">trusted-host =pypi.douban.com</span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+  <entry>
+    <title>vs配置opencv</title>
+    <url>/2021/04/19/vs%E9%85%8D%E7%BD%AEopencv/</url>
+    <content><![CDATA[<h2 id="新建vs属性表文件opencv-props"><a href="#新建vs属性表文件opencv-props" class="headerlink" title="新建vs属性表文件opencv.props"></a>新建vs属性表文件<code>opencv.props</code></h2><p>内容如下，将其中的目录换为你自己的opencv目录即可</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">Project</span> <span class="attr">ToolsVersion</span>=<span class="string">&quot;4.0&quot;</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://schemas.microsoft.com/developer/msbuild/2003&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ImportGroup</span> <span class="attr">Label</span>=<span class="string">&quot;PropertySheets&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">PropertyGroup</span> <span class="attr">Label</span>=<span class="string">&quot;UserMacros&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">PropertyGroup</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">IncludePath</span>&gt;</span>D:\Dev\opencv\opencv\build\include;$(IncludePath)<span class="tag">&lt;/<span class="name">IncludePath</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">LibraryPath</span>&gt;</span>D:\Dev\opencv\opencv\build\x64\vc15\lib;$(LibraryPath)<span class="tag">&lt;/<span class="name">LibraryPath</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">PropertyGroup</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ItemDefinitionGroup</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Link</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">AdditionalDependencies</span>&gt;</span>opencv_world3410d.lib;%(AdditionalDependencies)<span class="tag">&lt;/<span class="name">AdditionalDependencies</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Link</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ItemDefinitionGroup</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ItemGroup</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Project</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<h2 id="添加属性表"><a href="#添加属性表" class="headerlink" title="添加属性表"></a>添加属性表</h2><p>将<code>opencv.props</code>拷贝到工程目录下，vs中点击 <code>视图</code> —&gt; <code>其它窗口</code> —&gt; <code>属性窗口</code></p>
+<p>在属性窗口中为debug或者release右键添加现有属性表，选择<code>opencv.props</code>文件</p>
+<h2 id="添加头文件"><a href="#添加头文件" class="headerlink" title="添加头文件"></a>添加头文件</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/core/core.hpp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/imgproc/imgproc.hpp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/highgui/highgui.hpp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/imgcodecs/imgcodecs.hpp&gt;</span></span></span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+  <entry>
+    <title>光线通信第二章总结</title>
+    <url>/2021/04/19/%E5%85%89%E7%BA%A4%E9%80%9A%E4%BF%A1%E7%AC%AC%E4%BA%8C%E7%AB%A0%E6%80%BB%E7%BB%93/</url>
+    <content><![CDATA[<p>公式：</p>
+<span id="more"></span>
+<script type="math/tex; mode=display">
 相对折射率差\quad\triangle = \frac{n_1-n_2}{n_1}\\
 数值孔径\quad NA=\sqrt{n_1^2-n_2^2} \approx n_1\sqrt{2\triangle} \\
 最大时延差\quad \triangle\tau_{max}=\frac{L}{2n_1c}(NA)^2 \approx \frac{n_1L}{c}\triangle\\
@@ -113,46 +176,15 @@
       </categories>
   </entry>
   <entry>
-    <title>vs配置opencv</title>
-    <url>/2021/04/19/vs%E9%85%8D%E7%BD%AEopencv/</url>
-    <content><![CDATA[<h2 id="新建vs属性表文件opencv-props"><a href="#新建vs属性表文件opencv-props" class="headerlink" title="新建vs属性表文件opencv.props"></a>新建vs属性表文件<code>opencv.props</code></h2><p>内容如下，将其中的目录换为你自己的opencv目录即可</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">Project</span> <span class="attr">ToolsVersion</span>=<span class="string">&quot;4.0&quot;</span> <span class="attr">xmlns</span>=<span class="string">&quot;http://schemas.microsoft.com/developer/msbuild/2003&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ImportGroup</span> <span class="attr">Label</span>=<span class="string">&quot;PropertySheets&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">PropertyGroup</span> <span class="attr">Label</span>=<span class="string">&quot;UserMacros&quot;</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">PropertyGroup</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">IncludePath</span>&gt;</span>D:\Dev\opencv\opencv\build\include;$(IncludePath)<span class="tag">&lt;/<span class="name">IncludePath</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">LibraryPath</span>&gt;</span>D:\Dev\opencv\opencv\build\x64\vc15\lib;$(LibraryPath)<span class="tag">&lt;/<span class="name">LibraryPath</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">PropertyGroup</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ItemDefinitionGroup</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Link</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">AdditionalDependencies</span>&gt;</span>opencv_world3410d.lib;%(AdditionalDependencies)<span class="tag">&lt;/<span class="name">AdditionalDependencies</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">Link</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">ItemDefinitionGroup</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">ItemGroup</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Project</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="添加属性表"><a href="#添加属性表" class="headerlink" title="添加属性表"></a>添加属性表</h2><p>将<code>opencv.props</code>拷贝到工程目录下，vs中点击 <code>视图</code> —&gt; <code>其它窗口</code> —&gt; <code>属性窗口</code></p>
-<p>在属性窗口中为debug或者release右键添加现有属性表，选择<code>opencv.props</code>文件</p>
-<h2 id="添加头文件"><a href="#添加头文件" class="headerlink" title="添加头文件"></a>添加头文件</h2><figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/core/core.hpp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/imgproc/imgproc.hpp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/highgui/highgui.hpp&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;opencv2/imgcodecs/imgcodecs.hpp&gt;</span></span></span><br></pre></td></tr></table></figure>
+    <title>常用Hexo命令</title>
+    <url>/2021/04/19/%E5%B8%B8%E7%94%A8hexo%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<h2 id="常见命令"><a href="#常见命令" class="headerlink" title="常见命令"></a>常见命令</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo new &quot;postName&quot; #新建文章</span><br><span class="line">hexo new page &quot;pageName&quot; #新建页面</span><br><span class="line">hexo generate #生成静态页面至public目录</span><br><span class="line">hexo server #开启预览访问端口（默认端口4000，&#39;ctrl + c&#39;关闭server）</span><br><span class="line">hexo deploy #部署到GitHub</span><br><span class="line">hexo help  # 查看帮助</span><br><span class="line">hexo version  #查看Hexo的版本</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<h2 id="缩写形式"><a href="#缩写形式" class="headerlink" title="缩写形式"></a>缩写形式</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo n &#x3D;&#x3D; hexo new</span><br><span class="line">hexo g &#x3D;&#x3D; hexo generate</span><br><span class="line">hexo s &#x3D;&#x3D; hexo server</span><br><span class="line">hexo d &#x3D;&#x3D; hexo deploy</span><br></pre></td></tr></table></figure>
+<h2 id="组合命令"><a href="#组合命令" class="headerlink" title="组合命令"></a>组合命令</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo s -g #生成并本地预览</span><br><span class="line">hexo d -g #生成并上传</span><br></pre></td></tr></table></figure>
 ]]></content>
-  </entry>
-  <entry>
-    <title>pip换源</title>
-    <url>/2021/04/19/pip%E6%8D%A2%E6%BA%90/</url>
-    <content><![CDATA[<h2 id="采用国内源，加速下载模块的速度"><a href="#采用国内源，加速下载模块的速度" class="headerlink" title="采用国内源，加速下载模块的速度"></a>采用国内源，加速下载模块的速度</h2><p>1、常用pip源：</p>
-<p>— 豆瓣：<a href="https://pypi.douban.com/simple">https://pypi.douban.com/simple</a> </p>
-<p>— 阿里：<a href="https://mirrors.aliyun.com/pypi/simple">https://mirrors.aliyun.com/pypi/simple</a> </p>
-<p>2、加速安装的命令： </p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">pip install -i https:&#x2F;&#x2F;pypi.douban.com&#x2F;simple 模块名</span><br></pre></td></tr></table></figure>
-<h2 id="永久配置安装源"><a href="#永久配置安装源" class="headerlink" title="永久配置安装源"></a><strong>永久配置安装源</strong></h2><p>1、文件管理器文件路径地址栏敲：%APPDATA% 回车，</p>
-<p>​        进入 C:\Users\电脑用户\AppData\Roaming 文件夹中 </p>
-<p>2、新建 pip 文件夹并在文件夹中新建 pip.ini 配置文件 </p>
-<p>3、新增 pip.ini 配置文件内容 </p>
-<h2 id="MacOS、Linux"><a href="#MacOS、Linux" class="headerlink" title="MacOS、Linux"></a>MacOS、Linux</h2><p>1、在用户根目录下 ~ 下创建 .pip 隐藏文件夹，如果已经有了可以跳过 — mkdir ~/.pip </p>
-<p>2、进入 .pip 隐藏文件夹并创建 pip.conf 配置文件 — cd ~/.pip &amp;&amp; touch pip.conf </p>
-<p>3、启动 Finder(访达) 按 cmd+shift+g 来的进入，输入 ~/.pip 回车进入</p>
-<p>4、新增 pip.conf 配置文件内容 “””</p>
-<h2 id="配置文件内容"><a href="#配置文件内容" class="headerlink" title="配置文件内容"></a>配置文件内容</h2><figure class="highlight tex"><table><tr><td class="code"><pre><span class="line">[global] </span><br><span class="line">index-url = http://pypi.douban.com/simple </span><br><span class="line">[install] </span><br><span class="line">use-mirrors =true </span><br><span class="line">mirrors =http://pypi.douban.com/simple/ </span><br><span class="line">trusted-host =pypi.douban.com</span><br></pre></td></tr></table></figure>
-]]></content>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2021/04/19/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
   </entry>
 </search>
