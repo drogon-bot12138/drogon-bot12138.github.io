@@ -205,16 +205,16 @@
       </categories>
   </entry>
   <entry>
-    <title>ResNet详解</title>
-    <url>/2021/04/20/ResNet%E8%AF%A6%E8%A7%A3/</url>
-    <content><![CDATA[<h2 id="残差神经网络-ResNet"><a href="#残差神经网络-ResNet" class="headerlink" title="残差神经网络(ResNet)"></a>残差神经网络(ResNet)</h2><p>​    残差神经网络的主要贡献是发现了“退化现象（Degradation）”，并针对退化现象发明了 “快捷连接（Shortcut connection）”，极大的消除了深度过大的神经网络训练困难问题。神经网络的“深度”首次突破了100层、最大的神经网络甚至超过了1000层。</p>
+    <title>ResNet详解和实现</title>
+    <url>/2021/04/20/ResNet/</url>
+    <content><![CDATA[<h2 id="残差神经网络-ResNet"><a href="#残差神经网络-ResNet" class="headerlink" title="残差神经网络(ResNet)"></a>残差神经网络(ResNet)</h2><p>残差神经网络的主要贡献是发现了“退化现象（Degradation）”，并针对退化现象发明了 “快捷连接（Shortcut connection）”，极大的消除了深度过大的神经网络训练困难问题。神经网络的“深度”首次突破了100层、最大的神经网络甚至超过了1000层。</p>
 <h2 id="ResNet网络架构"><a href="#ResNet网络架构" class="headerlink" title="ResNet网络架构"></a>ResNet网络架构</h2><p>Shortcut Connection）是ResNet的一大亮点，其实用捷径的方式，使得计算H(x) = F(x)+x，这一改变使得模型的在不断增加深度的情况下，退化也不会非常严重。基本的残差结构如下：</p>
-<p><img src="/.com//ResNet详解\res.JPG" alt="res" style="zoom: 80%;"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/drogon-bot12138/blog-images/blog-images/ResNet1.jpg" style="zoom:80%;" /></p>
 <span id="more"></span>
 <p>论文中，不同深度的残差网络机构如下：</p>
-<p><img src="/.com//ResNet详解\resnet2.jpg" alt="resnet2" style="zoom: 25%;"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/drogon-bot12138/blog-images/blog-images/ResNet2.jpg" style="zoom:25%;" /></p>
 <h2 id="ResNet详细结构图"><a href="#ResNet详细结构图" class="headerlink" title="ResNet详细结构图"></a>ResNet详细结构图</h2><p>ResNet18和ResNet34是两种不同的残差网络，单看论文里面的结构可能难以理解，更不用说构建了，这里给出了详细的实现图：</p>
-<p><img src="/.com//ResNet详解\resnet.jpg" alt="resnet"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/drogon-bot12138/blog-images/blog-images/ResNet3.jpg" alt=""></p>
 <h2 id="构建基类"><a href="#构建基类" class="headerlink" title="构建基类"></a>构建基类</h2><p>ResNet中，包含两种模块，一种是上图中，旁边伴随有实现的模块，其特点是输入和输出的维度是一致的记为<code>BasicBlock1</code>，另一种是上图中虚线部分的，也就是输入和输出的维度不一样的部分，我们记为<code>BasicBlock2</code></p>
 <p>采用面向对象的设计方法，考虑到ResNet中预处理和最后的全连层处理部分都是相同的，即都是把输入为（3，224，224）的图像卷积、池化后变成（64，56，56）的特征向量。因此建立基类<code>ResNet</code></p>
 <p>对于模块<code>BasicBlock1</code>、<code>BasicBlock2</code>，我们可以看到其都是具有H(x)=F(x)+x的形式，以此也为其建立基类<code>BasicBlock</code></p>

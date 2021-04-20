@@ -20,23 +20,23 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="残差神经网络(ResNet)​    残差神经网络的主要贡献是发现了“退化现象（Degradation）”，并针对退化现象发明了 “快捷连接（Shortcut connection）”，极大的消除了深度过大的神经网络训练困难问题。神经网络的“深度”首次突破了100层、最大的神经网络甚至超过了1000层。 ResNet网络架构Shortcut Connection）是ResNet的一大亮点，其实用捷">
+  <meta name="description" content="残差神经网络(ResNet)残差神经网络的主要贡献是发现了“退化现象（Degradation）”，并针对退化现象发明了 “快捷连接（Shortcut connection）”，极大的消除了深度过大的神经网络训练困难问题。神经网络的“深度”首次突破了100层、最大的神经网络甚至超过了1000层。 ResNet网络架构Shortcut Connection）是ResNet的一大亮点，其实用捷径的方式，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ResNet详解">
-<meta property="og:url" content="http://example.com/2021/04/20/ResNet%E8%AF%A6%E8%A7%A3/index.html">
+<meta property="og:title" content="ResNet详解和实现">
+<meta property="og:url" content="http://example.com/2021/04/20/ResNet/index.html">
 <meta property="og:site_name" content="drogon james">
-<meta property="og:description" content="残差神经网络(ResNet)​    残差神经网络的主要贡献是发现了“退化现象（Degradation）”，并针对退化现象发明了 “快捷连接（Shortcut connection）”，极大的消除了深度过大的神经网络训练困难问题。神经网络的“深度”首次突破了100层、最大的神经网络甚至超过了1000层。 ResNet网络架构Shortcut Connection）是ResNet的一大亮点，其实用捷">
+<meta property="og:description" content="残差神经网络(ResNet)残差神经网络的主要贡献是发现了“退化现象（Degradation）”，并针对退化现象发明了 “快捷连接（Shortcut connection）”，极大的消除了深度过大的神经网络训练困难问题。神经网络的“深度”首次突破了100层、最大的神经网络甚至超过了1000层。 ResNet网络架构Shortcut Connection）是ResNet的一大亮点，其实用捷径的方式，">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="http://example.com/.com//ResNet详解/res.JPG">
-<meta property="og:image" content="http://example.com/.com//ResNet详解/resnet2.jpg">
-<meta property="og:image" content="http://example.com/.com//ResNet详解/resnet.jpg">
-<meta property="article:published_time" content="2021-04-20T10:10:02.000Z">
-<meta property="article:modified_time" content="2021-04-20T11:49:27.503Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/drogon-bot12138/blog-images/blog-images/ResNet1.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/drogon-bot12138/blog-images/blog-images/ResNet2.jpg">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/drogon-bot12138/blog-images/blog-images/ResNet3.jpg">
+<meta property="article:published_time" content="2021-04-20T12:11:19.000Z">
+<meta property="article:modified_time" content="2021-04-20T12:47:08.617Z">
 <meta property="article:author" content="drogon james">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/.com//ResNet详解/res.JPG">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/drogon-bot12138/blog-images/blog-images/ResNet1.jpg">
 
-<link rel="canonical" href="http://example.com/2021/04/20/ResNet%E8%AF%A6%E8%A7%A3/">
+<link rel="canonical" href="http://example.com/2021/04/20/ResNet/">
 
 
 <script id="page-configurations">
@@ -49,7 +49,7 @@
   };
 </script>
 
-  <title>ResNet详解 | drogon james</title>
+  <title>ResNet详解和实现 | drogon james</title>
   
 
 
@@ -182,7 +182,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/20/ResNet%E8%AF%A6%E8%A7%A3/">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/04/20/ResNet/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -195,7 +195,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          ResNet详解
+          ResNet详解和实现
         </h1>
 
         <div class="post-meta">
@@ -206,7 +206,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-04-20 18:10:02 / 修改时间：19:49:27" itemprop="dateCreated datePublished" datetime="2021-04-20T18:10:02+08:00">2021-04-20</time>
+              <time title="创建时间：2021-04-20 20:11:19 / 修改时间：20:47:08" itemprop="dateCreated datePublished" datetime="2021-04-20T20:11:19+08:00">2021-04-20</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -246,14 +246,14 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h2 id="残差神经网络-ResNet"><a href="#残差神经网络-ResNet" class="headerlink" title="残差神经网络(ResNet)"></a>残差神经网络(ResNet)</h2><p>​    残差神经网络的主要贡献是发现了“退化现象（Degradation）”，并针对退化现象发明了 “快捷连接（Shortcut connection）”，极大的消除了深度过大的神经网络训练困难问题。神经网络的“深度”首次突破了100层、最大的神经网络甚至超过了1000层。</p>
+        <h2 id="残差神经网络-ResNet"><a href="#残差神经网络-ResNet" class="headerlink" title="残差神经网络(ResNet)"></a>残差神经网络(ResNet)</h2><p>残差神经网络的主要贡献是发现了“退化现象（Degradation）”，并针对退化现象发明了 “快捷连接（Shortcut connection）”，极大的消除了深度过大的神经网络训练困难问题。神经网络的“深度”首次突破了100层、最大的神经网络甚至超过了1000层。</p>
 <h2 id="ResNet网络架构"><a href="#ResNet网络架构" class="headerlink" title="ResNet网络架构"></a>ResNet网络架构</h2><p>Shortcut Connection）是ResNet的一大亮点，其实用捷径的方式，使得计算H(x) = F(x)+x，这一改变使得模型的在不断增加深度的情况下，退化也不会非常严重。基本的残差结构如下：</p>
-<p><img src="/.com//ResNet详解\res.JPG" alt="res" style="zoom: 80%;"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/drogon-bot12138/blog-images/blog-images/ResNet1.jpg" style="zoom:80%;" /></p>
 <span id="more"></span>
 <p>论文中，不同深度的残差网络机构如下：</p>
-<p><img src="/.com//ResNet详解\resnet2.jpg" alt="resnet2" style="zoom: 25%;"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/drogon-bot12138/blog-images/blog-images/ResNet2.jpg" style="zoom:25%;" /></p>
 <h2 id="ResNet详细结构图"><a href="#ResNet详细结构图" class="headerlink" title="ResNet详细结构图"></a>ResNet详细结构图</h2><p>ResNet18和ResNet34是两种不同的残差网络，单看论文里面的结构可能难以理解，更不用说构建了，这里给出了详细的实现图：</p>
-<p><img src="/.com//ResNet详解\resnet.jpg" alt="resnet"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/drogon-bot12138/blog-images/blog-images/ResNet3.jpg" alt=""></p>
 <h2 id="构建基类"><a href="#构建基类" class="headerlink" title="构建基类"></a>构建基类</h2><p>ResNet中，包含两种模块，一种是上图中，旁边伴随有实现的模块，其特点是输入和输出的维度是一致的记为<code>BasicBlock1</code>，另一种是上图中虚线部分的，也就是输入和输出的维度不一样的部分，我们记为<code>BasicBlock2</code></p>
 <p>采用面向对象的设计方法，考虑到ResNet中预处理和最后的全连层处理部分都是相同的，即都是把输入为（3，224，224）的图像卷积、池化后变成（64，56，56）的特征向量。因此建立基类<code>ResNet</code></p>
 <p>对于模块<code>BasicBlock1</code>、<code>BasicBlock2</code>，我们可以看到其都是具有H(x)=F(x)+x的形式，以此也为其建立基类<code>BasicBlock</code></p>
